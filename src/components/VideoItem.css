@@ -1,0 +1,10 @@
+.video-item {
+  display: flex !important;
+  align-items: center !important;
+  /* cursor: pointer = if u move the mouse to this area, it will turn cursor into a clicky icon */
+  cursor: pointer;
+}
+
+.video-item.item img {
+  max-width: 180px;
+}

@@ -1,0 +1,59 @@
+                                    Flow chart of how this app works
+1. React + Axios
+2. Axios says " Can you send me a list of videos related to ....?"
+3. Youtube API
+4. Youtube says "Sure, here you go."
+    => Youtube gives a list of videos
+    => The videos are going to be an array of object where every object represents a different video.
+    => NOTE: In order to make use of API, we have to get an API key
+
+                                    How to get an API key
+=> Go to " console.developers.google.com"
+=> Click the dropdown on the menu bar of where it will show all your projects. 
+=> Then you will see a popup, where you can go to the " New Project" menu
+=> Create a new projects
+=> Once you created a project, you can then generate an API key that will allow you to access the Youtube API.
+=> Once you new project has been created, go to the dropdown menu where u can select you newly created project.
+=> Click on you new project.
+=> Click on button " Enable API and Servieces" 
+=> Type in a search bar for "Youtube"
+=> Choose "Youtube Data API V3" and click on "Enable". Then it will give you the access to the API.
+=> Click on "Create Credentials" Then you will end up on a form to fill in.
+    => Which API are you using? => Youtube Data API V3
+    => Where will you be calling the API from? => Web Browser(Javascript)
+    => What data will you be accessing? => Public data (We would only select "User Data" if we want to attempt to login as a user's behalf and say edit their list of videos or videos or otherwise manage videos on behalf of the user)
+    => Then you get the API key
+
+    NOTE:                           Understanding about API key
+=> The API key is going to be used inside of the browser. That means when the user accesses your application, you are going to be sending them this API key. Its going to be inside their browser. And the user without a lot of trouble, without a lot of effort, they could potentially very easily get their hands on your api key.
+=> If you want to, you can add in some additional restrictions in how this key can be used. By clicking on "Restrict key" 
+=> Then go to "Application Restriction"
+=> Then you can choose An application restriction controls which websites, IP addresses or applications can use your API key 
+=> In this case we choose "HTTP referers" => then u can set a different webpages that can make use of this key.
+=> In this case we set "localhost:3000"
+=> Now if anyone tried to take our api key and use it from some different website, google is going to see that the key is being used from other website and don't allow it. So the request from tthat other website will be completely blocked and we would not have to pay for it or anything like that.
+
+ NOTE:                                   How to use Youtube API on this app
+=> Google search for "youtube api search"
+=> Go to "https://developers.google.com/"
+=> Look at the "Request" title to see the base URL
+=> click "Try this API" on the right habd side
+=> Fill in some info : Part = snippet, maxResult = 5(or how many you like), q(query) = the actual search term that we want to attempt to make
+=> The purpose of "Part" is to tell the Youtube API what info that we want to retrieve about each video. The term "snippet" = send us back a snippet summary of the entire video. So it will give us the info like video title, description, a link to the video, author, etc. 
+=> then click "execute" => then u will get a response file back from Youtube API
+🌟💥💥☀️🌟 See how we use it in "youtube.js"
+
+                            🍏🍏🍏🍏 Techniques && methids that have learned from this app 🍏🍏🍏🍏 
+=> How to access Youtube API 
+=> How to pass object from child to parent component
+=> iFrame tag in HTML : iFrame tag is going to make an attempt to make a request to some outside website besides the one that the user is visting on the screen.
+=> Use Semantic UI build-in grid system to make the layout of the page
+=> NOTE: NOTE: NOTE: This app has examples of how to use both class and function component 💥💥 💥💥💥💥
+
+
+
+NOTE: Have to read more
+=> Why some component do we use functional components instaed of class component?
+=> How to reference string object in {}
+
+
