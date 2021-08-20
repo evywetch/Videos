@@ -56,4 +56,7 @@ NOTE: Have to read more
 => Why some component do we use functional components instaed of class component?
 => How to reference string object in {}
 
+NOTE: 🔥🔥🔥🔥🔥🔥
+=> Have to make a request from http://localhost:3000/, otherwise will get error 403 permission denied from the server.
+
 
